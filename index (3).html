@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Q Football Pathways | Elite U.S. Soccer Placement for European Players</title>
+<meta name="description" content="Q Football Pathways connects talented European soccer players with elite U.S. prep schools and NCAA college programs. Founded by South Kent School coach Alex Quinones."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --navy:   #0D1F3C;
+  --green:  #1A7A4A;
+  --lgreen: #2FAD6A;
+  --gold:   #D4A843;
+  --white:  #FFFFFF;
+  --offwhite: #F5F7FA;
+  --gray:   #8898AA;
+  --dark:   #0A1628;
+  --text:   #1E2D3D;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ── NAV ─────────────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+  height: 72px;
+  background: rgba(13,31,60,0.97);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+}
+
+.logo-badge {
+  width: 44px; height: 44px;
+  background: var(--green);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px; font-weight: 800;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: white; letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.logo-text span { color: var(--gold); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.nav-cta {
+  background: var(--green);
+  color: white !important;
+  padding: 10px 22px;
+  border-radius: 3px;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--lgreen) !important; color: white !important; }
+
+/* ── HERO ─────────────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  background: var(--dark);
+  position: relative;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg-pattern {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(26,122,74,0.12) 0%, transparent 50%),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 40px,
+      rgba(255,255,255,0.015) 40px,
+      rgba(255,255,255,0.015) 41px
+    );
+}
+
+.hero-accent {
+  position: absolute; right: 0; top: 0;
+  width: 45%; height: 100%;
+  background: linear-gradient(135deg, transparent 40%, rgba(26,122,74,0.18) 100%);
+  clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.hex-deco {
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(26,122,74,0.12);
+}
+.hex-deco.h1 { width: 320px; height: 320px; right: 8%; top: 10%; }
+.hex-deco.h2 { width: 180px; height: 180px; right: 22%; bottom: 15%; background: rgba(212,168,67,0.08); }
+.hex-deco.h3 { width: 90px;  height: 90px;  right: 5%;  bottom: 30%; }
+
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 140px 5% 100px;
+  max-width: 700px;
+}
+
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(26,122,74,0.2);
+  border: 1px solid rgba(26,122,74,0.4);
+  border-radius: 3px;
+  padding: 6px 14px;
+  font-size: 12px; font-weight: 600;
+  color: var(--lgreen);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.hero-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--lgreen);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.hero-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 800;
+  line-height: 0.95;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+}
+
+.hero-title em {
+  font-style: normal;
+  color: var(--gold);
+  display: block;
+}
+
+.hero-sub {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-bottom: 48px;
+  max-width: 540px;
+}
+
+.hero-sub strong { color: white; font-weight: 500; }
+
+.hero-btns {
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+  padding: 16px 36px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-primary:hover { background: var(--lgreen); transform: translateY(-2px); }
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 16px 36px;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.25);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: white; background: rgba(255,255,255,0.05); }
+
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-stat {
+  padding: 28px 5%;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+.hero-stat:last-child { border-right: none; }
+
+.hero-stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px; font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 12px; font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ── SECTIONS ─────────────────────────────────────────────── */
+section { padding: 100px 5%; }
+
+.section-tag {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(34px, 4.5vw, 54px);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.section-sub {
+  font-size: 17px;
+  color: var(--gray);
+  line-height: 1.75;
+  max-width: 580px;
+}
+
+/* ── ABOUT ─────────────────────────────────────────────────── */
+#about { background: var(--offwhite); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-card {
+  background: var(--navy);
+  border-radius: 6px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 5px; height: 100%;
+  background: var(--gold);
+}
+
+.about-card-hex {
+  position: absolute; top: -40px; right: -40px;
+  width: 180px; height: 180px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(26,122,74,0.15);
+}
+
+.about-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px; font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.about-role {
+  font-size: 13px; font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.about-divider {
+  width: 50px; height: 3px;
+  background: var(--green);
+  margin-bottom: 24px;
+}
+
+.about-bio {
+  font-size: 15px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.8;
+}
+
+.about-bio strong { color: white; }
+
+.credential-pills {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin-top: 28px;
+}
+
+.pill {
+  background: rgba(26,122,74,0.25);
+  border: 1px solid rgba(26,122,74,0.4);
+  color: var(--lgreen);
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.about-text h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px; font-weight: 700;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.mls-row {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.mls-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 4px;
+  padding: 16px 20px;
+  border-left: 4px solid var(--green);
+  flex: 1; min-width: 180px;
+}
+
+.mls-player { font-weight: 700; font-size: 15px; color: var(--navy); }
+.mls-club   { font-size: 13px; color: var(--gray); margin-top: 2px; }
+
+/* ── PATHWAY ───────────────────────────────────────────────── */
+#pathway { background: var(--navy); }
+
+#pathway .section-title { color: white; }
+#pathway .section-sub   { color: rgba(255,255,255,0.55); }
+#pathway .section-tag   { color: var(--gold); }
+
+.pathway-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin-top: 64px;
+  position: relative;
+}
+
+.pathway-steps::before {
+  content: '';
+  position: absolute;
+  top: 40px; left: 10%; right: 10%;
+  height: 2px;
+  background: linear-gradient(to right, var(--green), var(--gold));
+  z-index: 0;
+}
+
+.step {
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-num {
+  width: 80px; height: 80px;
+  background: var(--green);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px; font-weight: 800;
+  color: white;
+  transition: background 0.2s;
+}
+
+.step:hover .step-num { background: var(--gold); }
+
+.step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px; font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.step-body {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+}
+
+/* ── SERVICES ──────────────────────────────────────────────── */
+#services { background: var(--offwhite); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 64px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+}
+
+.service-card.featured {
+  background: var(--navy);
+  position: relative;
+}
+
+.service-top {
+  background: var(--navy);
+  padding: 28px 32px 22px;
+  position: relative;
+}
+
+.service-card.featured .service-top { background: var(--green); }
+
+.service-badge {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.service-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px; font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.service-price-area {
+  padding: 24px 32px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.service-card.featured .service-price-area {
+  border-bottom-color: rgba(255,255,255,0.08);
+}
+
+.service-price {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 44px; font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+
+.service-card.featured .service-price { color: var(--gold); }
+
+.service-price-note {
+  font-size: 13px;
+  color: var(--gray);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.service-card.featured .service-price-note { color: rgba(255,255,255,0.45); }
+
+.service-features {
+  padding: 24px 32px 32px;
+  list-style: none;
+}
+
+.service-features li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px;
+  color: var(--text);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  line-height: 1.5;
+}
+
+.service-card.featured .service-features li {
+  color: rgba(255,255,255,0.7);
+  border-bottom-color: rgba(255,255,255,0.07);
+}
+
+.service-features li:last-child { border-bottom: none; }
+
+.service-features li::before {
+  content: '';
+  width: 16px; height: 16px;
+  background: var(--green);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-card.featured .service-features li::before { background: var(--gold); }
+
+.service-cta {
+  margin: 0 32px 32px;
+  display: block;
+  text-align: center;
+  background: var(--green);
+  color: white;
+  padding: 14px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+
+.service-cta:hover { background: var(--lgreen); }
+.service-card.featured .service-cta { background: var(--gold); }
+.service-card.featured .service-cta:hover { background: #c49430; }
+
+/* ── WHY US ─────────────────────────────────────────────────── */
+#why { background: white; }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 64px;
+}
+
+.why-card {
+  padding: 36px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  border-top: 4px solid var(--green);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.why-card:hover {
+  border-top-color: var(--gold);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+.why-icon {
+  width: 52px; height: 52px;
+  background: rgba(26,122,74,0.1);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.why-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px; font-weight: 700;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.why-body {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.75;
+}
+
+/* ── PROOF / SCHOOLS ─────────────────────────────────────────── */
+#proof {
+  background: var(--offwhite);
+  text-align: center;
+}
+
+.schools-label {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 32px;
+  margin-top: 60px;
+}
+
+.schools-strip {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 16px;
+}
+
+.school-tag {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 3px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+}
+
+.proof-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 24px; margin-top: 64px;
+}
+
+.proof-stat {
+  background: white;
+  border-radius: 6px;
+  padding: 40px 24px;
+  border: 1px solid #E2E8F0;
+  text-align: center;
+}
+
+.proof-stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 52px; font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.proof-stat-val span { color: var(--green); }
+
+.proof-stat-label {
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* ── CONTACT ────────────────────────────────────────────────── */
+#contact {
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(26,122,74,0.15) 0%, transparent 60%);
+}
+
+.contact-grid {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+#contact .section-title { color: white; }
+#contact .section-sub   { color: rgba(255,255,255,0.55); margin-top: 16px; }
+#contact .section-tag   { color: var(--gold); }
+
+.contact-links {
+  display: flex; flex-direction: column; gap: 0;
+  margin-top: 40px;
+}
+
+.contact-link {
+  display: flex; align-items: center; gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  text-decoration: none;
+  transition: padding-left 0.2s;
+}
+
+.contact-link:hover { padding-left: 8px; }
+
+.contact-link-icon {
+  width: 44px; height: 44px;
+  background: rgba(26,122,74,0.2);
+  border: 1px solid rgba(26,122,74,0.4);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-link-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.contact-link-val {
+  font-size: 16px; font-weight: 500;
+  color: white;
+  margin-top: 2px;
+}
+
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 8px;
+  padding: 48px 40px;
+}
+
+.form-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px; font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.form-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 32px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.form-group { margin-bottom: 20px; }
+
+.form-label {
+  display: block;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  padding: 13px 16px;
+  color: white;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder { color: rgba(255,255,255,0.25); }
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--green);
+}
+
+.form-select { cursor: pointer; appearance: none; }
+.form-select option { background: var(--navy); }
+
+.form-textarea { min-height: 110px; resize: vertical; }
+
+.form-submit {
+  width: 100%;
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 4px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 15px; font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.form-submit:hover { background: var(--lgreen); transform: translateY(-1px); }
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+footer {
+  background: #080F1D;
+  padding: 32px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-left {
+  display: flex; align-items: center; gap: 16px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+}
+
+.footer-right {
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ── MOBILE ─────────────────────────────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 8px;
+}
+
+.hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: white; transition: all 0.2s;
+}
+
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 72px; left: 0; right: 0;
+    background: rgba(13,31,60,0.98);
+    flex-direction: column;
+    padding: 24px 5%;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 0; font-size: 16px; }
+
+  .hero-stats { grid-template-columns: repeat(2, 1fr); position: static; }
+  .hero-content { padding-bottom: 0; }
+  #hero { min-height: auto; padding-bottom: 0; }
+
+  .about-grid,
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+
+  .pathway-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .pathway-steps::before { display: none; }
+
+  .services-grid,
+  .why-grid { grid-template-columns: 1fr; }
+
+  .proof-stats { grid-template-columns: repeat(2, 1fr); }
+
+  .form-row { grid-template-columns: 1fr; }
+}
+
+/* ── ANIMATIONS ─────────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="logo-badge">Q</div>
+    <div class="logo-text">Q Football<br/><span>Pathways</span></div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#pathway">The Pathway</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-accent"></div>
+  <div class="hex-deco h1"></div>
+  <div class="hex-deco h2"></div>
+  <div class="hex-deco h3"></div>
+
+  <div class="hero-content">
+    <div class="hero-tag">Elite U.S. Soccer Placement</div>
+    <h1 class="hero-title">
+      Your Child's<br/>
+      <em>U.S. Soccer</em><br/>
+      Pathway.
+    </h1>
+    <p class="hero-sub">
+      We connect <strong>talented European players</strong> with elite U.S. prep schools
+      and NCAA college programs — handling everything from highlight videos
+      to full school placement.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Book a Free Call ↗</a>
+      <a href="#pathway" class="btn-secondary">See How It Works</a>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-val">6×</div>
+      <div class="hero-stat-label">National Championships</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">MLS</div>
+      <div class="hero-stat-label">Alumni Placed</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">NCAA</div>
+      <div class="hero-stat-label">D1, D2 & D3 Pathways</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val">100%</div>
+      <div class="hero-stat-label">Success-Based Fee</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-tag">Who We Are</div>
+  <h2 class="section-title">Built by a Coach<br/>Who Knows the System</h2>
+  <p class="section-sub">Not an algorithm. Not a platform. A real coach with real connections inside U.S. prep school and college soccer.</p>
+
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-card fade-in">
+        <div class="about-card-hex"></div>
+        <div class="about-name">Alexander Quinones</div>
+        <div class="about-role">Founder & Director</div>
+        <div class="about-divider"></div>
+        <p class="about-bio">
+          I'm the assistant coach at <strong>South Kent School</strong> in Connecticut — one of the most decorated prep school soccer programs in the United States, with <strong>six national championships</strong> and a direct pipeline to NCAA programs at every level.
+          <br/><br/>
+          Through Q Football Pathways, I use my inside access to help European families navigate the U.S. placement process — personally, not through a software platform.
+        </p>
+        <div class="credential-pills">
+          <span class="pill">South Kent School</span>
+          <span class="pill">6× National Champs</span>
+          <span class="pill">NCAA Network</span>
+          <span class="pill">USSF Licensed</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text fade-in">
+      <h3>Inside Access.<br/>Real Results.</h3>
+      <p>South Kent School has produced some of the most successful prep-to-college and prep-to-professional pathways in American soccer. As an active coach on staff, I know exactly what admissions teams, college coaches, and NCAA programs are looking for.</p>
+      <p>Families spend thousands every year on club fees with no professional placement strategy. We change that — one player at a time, with full accountability from first call to final placement.</p>
+
+      <div class="mls-row">
+        <div class="mls-card">
+          <div class="mls-player">Joshua Bolma</div>
+          <div class="mls-club">New England Revolution — MLS</div>
+        </div>
+        <div class="mls-card">
+          <div class="mls-player">Matthew Bell</div>
+          <div class="mls-club">Real Salt Lake — MLS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAY -->
+<section id="pathway">
+  <div class="section-tag">How It Works</div>
+  <h2 class="section-title">The Q Football Pathway</h2>
+  <p class="section-sub">A clear, proven five-step process — from first conversation to official U.S. school placement.</p>
+
+  <div class="pathway-steps">
+    <div class="step fade-in">
+      <div class="step-num">1</div>
+      <div class="step-title">Free Consultation</div>
+      <p class="step-body">30-minute call to assess your player's level, academics, and goals. Zero obligation — just clarity.</p>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">2</div>
+      <div class="step-title">Player Profile</div>
+      <p class="step-body">We create a professional highlight reel and digital athlete résumé tailored for U.S. coaches and admissions teams.</p>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">3</div>
+      <div class="step-title">School Matching</div>
+      <p class="step-body">We identify the right prep schools based on your player's athletic level, academics, and personal fit.</p>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">4</div>
+      <div class="step-title">Direct Outreach</div>
+      <p class="step-body">We personally contact coaches and admissions at target schools — using our existing relationships, not mass emails.</p>
+    </div>
+    <div class="step fade-in">
+      <div class="step-num">5</div>
+      <div class="step-title">Full Placement</div>
+      <p class="step-body">We guide your family through acceptance, visas, and the full transition to life and soccer in the U.S.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-tag">What We Offer</div>
+  <h2 class="section-title">Services & Pricing</h2>
+  <p class="section-sub">Transparent, flexible plans — structured around your player's individual journey. All pricing is customised to your needs.</p>
+
+  <div class="services-grid">
+    <!-- Card 1 -->
+    <div class="service-card fade-in">
+      <div class="service-top">
+        <span class="service-badge">Get Started</span>
+        <div class="service-name">Digital Recruitment Package</div>
+      </div>
+      <div class="service-price-area">
+        <div class="service-price">$250</div>
+        <div class="service-price-note">One-time package</div>
+      </div>
+      <ul class="service-features">
+        <li>Professional highlight reel editing</li>
+        <li>Athlete digital résumé / profile</li>
+        <li>Ready to send to U.S. coaches</li>
+        <li>Delivered within 2 weeks</li>
+        <li>Perfect foundation for recruitment</li>
+      </ul>
+      <a href="#contact" class="service-cta">Get Started</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="service-card featured fade-in">
+      <div class="service-top">
+        <span class="service-badge">Most Popular</span>
+        <div class="service-name">Elite Placement Fee</div>
+      </div>
+      <div class="service-price-area">
+        <div class="service-price">Custom</div>
+        <div class="service-price-note">Success-based — paid on confirmed placement</div>
+      </div>
+      <ul class="service-features">
+        <li>Full school placement service</li>
+        <li>Includes Digital Recruitment Package</li>
+        <li>Personalised coach & school outreach</li>
+        <li>12-month exclusivity agreement</li>
+        <li>You only pay on successful placement</li>
+        <li>Family support throughout the year</li>
+        <li>NCAA eligibility guidance included</li>
+      </ul>
+      <a href="#contact" class="service-cta">Book a Free Call</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card fade-in">
+      <div class="service-top">
+        <span class="service-badge">Expert Guidance</span>
+        <div class="service-name">Assessment Session</div>
+      </div>
+      <div class="service-price-area">
+        <div class="service-price">$100<span style="font-size:22px;color:var(--gray)">/hr</span></div>
+        <div class="service-price-note">1-on-1 with Alex Quinones</div>
+      </div>
+      <ul class="service-features">
+        <li>Direct session with Alex</li>
+        <li>Academic eligibility review</li>
+        <li>Scholarship strategy session</li>
+        <li>Any questions answered honestly</li>
+        <li>Great for families at the start of the process</li>
+      </ul>
+      <a href="#contact" class="service-cta">Book a Session</a>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:36px; font-size:14px; color:var(--gray);">
+    All packages include a free 30-minute initial consultation. Pricing can be tailored to your family's situation — <a href="#contact" style="color:var(--green); font-weight:600;">get in touch to discuss.</a>
+  </p>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-tag">Why Q Football Pathways</div>
+  <h2 class="section-title">Why Families<br/>Choose Us</h2>
+  <p class="section-sub">We're not a platform, a database, or a subscription. We're a specialist service with one goal: getting your player placed.</p>
+
+  <div class="why-grid">
+    <div class="why-card fade-in">
+      <div class="why-icon">🏫</div>
+      <div class="why-title">Inside South Kent Access</div>
+      <p class="why-body">Alex coaches at South Kent daily. He knows the admissions team, the coaching staff, and the standards. That inside access is something no platform can replicate.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">🎓</div>
+      <div class="why-title">NCAA Scholarship Pathway</div>
+      <p class="why-body">The U.S. awards nearly $4 billion in college athletic aid each year. We know how to position your player to compete for it — from transcripts to highlight videos.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">⚽</div>
+      <div class="why-title">Personal, Not Automated</div>
+      <p class="why-body">Unlike NCSA or FieldLevel, we personally contact every coach and school. No mass emails. Real relationships, real conversations, real results.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">🌍</div>
+      <div class="why-title">International Specialist</div>
+      <p class="why-body">Large platforms fail international players. We focus entirely on European families — understanding the cultural, academic, and logistical challenges involved.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">✅</div>
+      <div class="why-title">Success-Based Model</div>
+      <p class="why-body">Our Elite Placement Fee is paid only on confirmed school placement. Our incentives are 100% aligned with yours — we succeed when your player succeeds.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">👨‍👩‍👧</div>
+      <div class="why-title">Full Family Support</div>
+      <p class="why-body">Relocating your child to the U.S. is a big step. We guide the whole family — visas, schooling, settling in — for the entire year, not just until placement is confirmed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof">
+  <div class="section-tag">Track Record</div>
+  <h2 class="section-title" style="text-align:center">Built on a Proven Foundation</h2>
+  <p class="section-sub" style="margin:0 auto; text-align:center">Every placement we make builds on the reputation of South Kent School — one of the most successful prep soccer programs in U.S. history.</p>
+
+  <div class="proof-stats">
+    <div class="proof-stat fade-in">
+      <div class="proof-stat-val"><span>6</span>×</div>
+      <div class="proof-stat-label">National Championships</div>
+    </div>
+    <div class="proof-stat fade-in">
+      <div class="proof-stat-val">D<span>1</span></div>
+      <div class="proof-stat-label">NCAA Alumni Every Year</div>
+    </div>
+    <div class="proof-stat fade-in">
+      <div class="proof-stat-val">MLS</div>
+      <div class="proof-stat-label">Professional Graduates</div>
+    </div>
+    <div class="proof-stat fade-in">
+      <div class="proof-stat-val"><span>100</span>%</div>
+      <div class="proof-stat-label">Family-First Approach</div>
+    </div>
+  </div>
+
+  <div class="schools-label">Schools We Place Players Into</div>
+  <div class="schools-strip">
+    <div class="school-tag">South Kent School</div>
+    <div class="school-tag">Loomis Chaffee</div>
+    <div class="school-tag">The Taft School</div>
+    <div class="school-tag">Avon Old Farms</div>
+    <div class="school-tag">Suffield Academy</div>
+    <div class="school-tag">Hotchkiss School</div>
+    <div class="school-tag">Berkshire School</div>
+    <div class="school-tag">+ More on Request</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Talk About<br/>Your Player.</h2>
+      <p class="section-sub">The first step is a free 30-minute call. No obligation — just an honest conversation about whether this pathway is right for your family.</p>
+
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:alexsquinones@gmail.com">
+          <div class="contact-link-icon">✉️</div>
+          <div>
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-val">alexsquinones@gmail.com</div>
+          </div>
+        </a>
+        <a class="contact-link" href="https://wa.me/16037142185">
+          <div class="contact-link-icon">💬</div>
+          <div>
+            <div class="contact-link-label">WhatsApp</div>
+            <div class="contact-link-val">+1 (603) 714-2185</div>
+          </div>
+        </a>
+        <a class="contact-link" href="#">
+          <div class="contact-link-icon">📍</div>
+          <div>
+            <div class="contact-link-label">Location</div>
+            <div class="contact-link-val">South Kent, Connecticut, USA</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="form-title">Player Interest Form</div>
+      <div class="form-sub">Tell us about your player and we'll be in touch within 24 hours.</div>
+
+      <form action="https://formspree.io/f/mkoprdry" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Parent Name</label>
+            <input class="form-input" type="text" name="parent_name" placeholder="Your full name" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" name="email" placeholder="your@email.com" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Player Age</label>
+            <select class="form-select form-input" name="player_age">
+              <option value="">Select age</option>
+              <option>13</option><option>14</option><option>15</option>
+              <option>16</option><option>17</option><option>18</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Country</label>
+            <input class="form-input" type="text" name="country" placeholder="e.g. Ireland, Germany"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Current Club / Level</label>
+          <input class="form-input" type="text" name="club" placeholder="e.g. Shelbourne FC U18"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tell us about your player</label>
+          <textarea class="form-textarea" name="message" placeholder="Position, academic level, goals, any questions..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message — It's Free →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <div class="logo-badge" style="width:36px;height:36px;font-size:18px;">Q</div>
+    <span class="footer-copy">© 2026 Q Football Pathways. All rights reserved.</span>
+  </div>
+  <div class="footer-right">Not affiliated with NCAA. Consulting services only.</div>
+</footer>
+
+<script>
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// Fade in on scroll
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
